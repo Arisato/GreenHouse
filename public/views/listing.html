@@ -1,0 +1,16 @@
+<table class="table" ng-repeat="listing in listingsS">
+  <thead>
+    <tr>
+      <td class="title"><p>{{listing.title}}</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="date"><b>Date Available:</b> {{listing.dateAvailable | date: 'dd/MM/yyyy'}}</td>
+      <td class="price"><b>Price:</b> {{listing.price}}</td>
+    </tr>
+    <tr>
+      <td class="description">{{listing.description}}</td>
+      <td></td>
+    </tr>
+  </thead>
+</table>

@@ -1,0 +1,15 @@
+<div class="registerForm">
+	<form method="post">
+		<label>First Name: </label>
+		<input type="text" name="firstName" ng-model="user.firstName" required><br>
+		<label>Second Name: </label>
+		<input type="text" name="secondName" ng-model="user.secondName" required><br>
+		<label>Email: </label>
+		<input type="email" name="email" ng-model="user.email" required><br>
+		<label>Password: </label>
+		<input type="password" name="password" ng-model="user.password" required><br>
+		<button ng-click='register()'>Register</button>
+	</form>
+
+	<div>{{response}}</div>
+</div>
