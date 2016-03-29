@@ -32,8 +32,7 @@ app.use(express.static(__dirname + "/public"));
 // body parser middleware
 app.use(bodyParser.json());
 
-//GET listings
-app.get('/listings', function(req, res){
+var getListings = function(req, res){
 	console.log('GET request received');
 
 	Listing.find(function(err, docs){
@@ -41,9 +40,9 @@ app.get('/listings', function(req, res){
 		console.log(docs);
 		res.json(docs);
 	});
-});
+};
 
-app.post('/register', function(req,res){
+var postRegister = function(req,res){
 	console.log(req.body);
 	var user = new User({
 		firstName: req.body.firstName,
@@ -64,8 +63,13 @@ app.post('/register', function(req,res){
 			res.status(200).send({redirect: "/#/congratulations", firstName: req.body.firstName});
 		}
 	});
+};
 
-});
+//GET listings
+app.get('/listings', getListings);
+
+// POST user account info
+app.post('/register', postRegister);
 
 var portGate = 7000;
 
