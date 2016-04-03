@@ -4,6 +4,7 @@ var chai = require('chai');
 var chaiHttp = require('chai-http');
 var mongoose = require('mongoose');
 var server = require('../server');
+var sch = require('../res/schemas');
 var should = chai.should();
 chai.use(chaiHttp);
 
@@ -13,10 +14,10 @@ var ObjectId = Schema.Ob
 
 describe('listings', function() {
 
- server.Listing.collection.drop();
+ sch.Listing.collection.drop();
 
   beforeEach(function(done){
-    var newListings = new server.Listing({
+    var newListings = new sch.Listing({
       dateAvailable: '20/12/2015',
       price: 670,
       paymentPeriod: 'pm',
@@ -31,7 +32,7 @@ describe('listings', function() {
   });
 
   afterEach(function(done){
-    server.Listing.collection.drop();
+    sch.Listing.collection.drop();
     done();
   });
 
