@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var config = require('./sConfig');
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
@@ -11,7 +12,7 @@ var Listing = mongoose.model('listings', new Schema({
 	dateAvailable: String,
 	price: Number,
 	paymentPeriod: String,
-	propertyTyep: String,
+	propertyType: String,
 	title: String,
 	description: String
 }));
@@ -25,7 +26,15 @@ var User = mongoose.model('users', new Schema({
 }));
 
 //Connect to greenhouse DB
-mongoose.connect('mongodb://localhost/greenhouse');
+//mongoose.connect('mongodb://localhost/greenhouse');
+
+mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
+  if(err) {
+    console.log('Could not connect to database. ' + err);
+  } else {
+    console.log('Connection to database successful ' + config.mongoURI[app.settings.env] + '\n');
+  }
+});
 
 app.use(express.static(__dirname + "/public"));
 
@@ -37,7 +46,7 @@ var getListings = function(req, res){
 
 	Listing.find(function(err, docs){
 		console.log('Data received from DB:')
-		console.log(docs);
+		console.log(docs + '\n');
 		res.json(docs);
 	});
 };
@@ -75,3 +84,6 @@ var portGate = 7000;
 
 app.listen(portGate);
 console.log("Server is running on port " + portGate);
+
+module.exports.app = app;
+module.exports.Listing = Listing;
