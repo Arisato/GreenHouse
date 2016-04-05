@@ -1,4 +1,4 @@
-  <!-- <section class="containerLogin">
+  <section class="containerLogin">
     <div class="login">
       <form method="post" action="">
         <input type="text" name="login" value="" placeholder="Email" ng-model="userLogin.email" required>
@@ -9,25 +9,13 @@
             Remember me on this computer
           </label>
         </p>
-        <a ui-sref="login">
+        <!-- <a ui-sref="login"> -->
           <p class="submit"><input type="submit" name="commit" value="Login"></p>
-        </a>
+        <!-- </a> -->
       </form>
     </div>
 
     <div class="login-help">
       <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
     </div>
-  </section> -->
-
-  <div class="loginPanel">
-    <form method="post">
-        <label>Login </label>
-        <input type="text" name="login" value="" placeholder="Email" ng-model="userLogin.email" required><br>
-        <label>Password </label>
-        <input type="password" name="password" value="" placeholder="Password" ng-model="userLogin.password" required><br>
-        <button ng-click='login()'>Login</button>
-    </form>
-
-    <div>{{response}}</div>
-</div>
+  </section>

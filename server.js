@@ -42,14 +42,33 @@ var postRegister = function(req,res){
 	user.save(function(err){
 		if(err){
 			var error = 'Something went wrong, please try again.';
-		
 			if(err.code === 11000){
 				error = 'Email is in use, please choose another.'
 			};
 			res.send({error: error});
-		}
-		else{
+		} else{
 			res.status(200).send({redirect: "/#/congratulations", firstName: req.body.firstName});
+		}
+	});
+};
+
+var postLogin = function(req,res){
+	console.log(req.body);
+	var qr = sch.User.findOne({ email: req.body.email }, function(err, doc){
+		if(!doc){
+			var error = 'Email or password is incorrect'
+ 			res.send({error: error});
+ 			console.log(error);
+		} else{
+			console.log('Email is correct.');
+			if(req.body.password === doc.password){
+				console.log('Password is correct.');
+				res.status(200).send({redirect: "/#/login", email: req.body.email});
+			} else{
+				var error = 'Email or password is incorrect'
+ 				res.send({error: error});
+ 				console.log(error);
+			}
 		}
 	});
 };
@@ -57,8 +76,11 @@ var postRegister = function(req,res){
 //GET listings
 app.get('/listings', getListings);
 
-// POST user account info
+//POST user account info
 app.post('/register', postRegister);
+
+//POST user login info
+app.post('/login', postLogin);
 
 var portGate = 7000;
 

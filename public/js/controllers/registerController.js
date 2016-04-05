@@ -5,7 +5,7 @@ app.controller('registerController', ['$scope', '$http', '$window', 'gratzS', fu
 			if(response.redirect === '/#/congratulations'){
 				gratzS.setName(response.firstName);
 				$window.location.href = response.redirect;
-				console.log('this is from register ' +gratzS.getName());
+				console.log('this is from registerController ' +gratzS.getName());
 			}
 			else{
 				$scope.response = response.error;
