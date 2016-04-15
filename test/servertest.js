@@ -13,7 +13,7 @@ var ObjectId = Schema.Ob
 
 
 describe('Server', function() {
-  this.timeout(10000);
+  this.timeout(15000);
 
   before(function(done){
     var newListings = new sch.Listing({

@@ -1,25 +1,35 @@
 {
   "name": "greenhouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Project:**<br> [![Build Status](https://travis-ci.org/Arisato/GreenHouse.svg?branch=master)](https://travis-ci.org/Arisato/GreenHouse)",
   "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.14.1",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "client-sessions": "^0.7.0",
+    "emailjs": "^1.0.4",
     "express": "^4.13.3",
     "kerberos": "^0.0.17",
     "mongojs": "^1.4.1",
     "mongoose": "^4.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "mocha",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Arisato/GreenHouse.git"
   },
-  "author": "Mindaugas Rinkunas",
+  "author": "Mint",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Arisato/GreenHouse/issues"
