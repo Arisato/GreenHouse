@@ -1,0 +1,12 @@
+<br>
+<div class="adForm">
+	<form method="post">
+		<input type="text" name="name" value="" placeholder="Senders Name" class="form-control" ng-model="emailAd.name" required><br>
+		<input type="text" name="email" value="" placeholder="Senders Email" class="form-control" ng-model="emailAd.email" required><br>
+		<textarea name="description" cols="40" rows="10" value="" placeholder="Enter your message here." class="form-control" ng-model="emailAd.message" required></textarea><br>
+		<button class="btn btn-success" ng-click='send()'>Send</button>
+		<button class="btn btn-primary" ng-click='cancel()'>Go Back</button>
+	</form>
+
+	<div>{{response}}</div>
+</div>

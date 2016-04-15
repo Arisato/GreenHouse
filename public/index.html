@@ -1,17 +1,33 @@
 <!DOCTYPE>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <title>Listings</title>
 
   </head>
 
   <body ng-app="app">
-      <h1 class="pageTitle">Property Listings Web Application</h1>
+      <!-- <h1 class="pageTitle">Welcome To Green House!</h1><br><br><br><br> -->
+
+      <div ui-view="chatView"></div>
+
+      <div ui-view="adDetailView"></div>
+
+      <div ui-view="myAdDetailView"></div>
+
+      <div ui-view="emailAdView"></div>
 
       <div ui-view="gratzView"></div>
+
+      <div ui-view="profileView"></div>
+
+      <div ui-view="editAdView"></div>
+
+      <div ui-view="myAdsView"></div>
+
+      <div ui-view="newAdView"></div>
 
       <div ui-view="loginView"></div>
 
@@ -21,7 +37,8 @@
 
     <!-- Angular -->
     <script src="js/vendor/angular.min.js"></script>
-    <script src="js/vendor/angular-ui-router.min.js"></script>    
+    <script src="js/vendor/angular-ui-router.min.js"></script>
+    
 
     <!-- Modules -->
     <script src="js/app.js"></script>
@@ -32,11 +49,21 @@
     <script src="js/controllers/gratzController.js"></script>
     <script src="js/controllers/loginController.js"></script>
     <script src="js/controllers/loggedinController.js"></script>
+    <script src="js/controllers/profileController.js"></script>
+    <script src="js/controllers/logoutController.js"></script>
+    <script src="js/controllers/newAdController.js"></script>
+    <script src="js/controllers/myAdsController.js"></script>
+    <script src="js/controllers/editAdController.js"></script>
+    <script src="js/controllers/adDetailController.js"></script>
+    <script src="js/controllers/myAdDetailsController.js"></script>
+    <script src="js/controllers/emailAdController.js"></script>
 
     <!-- Services -->
-    <script src="js/services/listingsS.js"></script>
     <script src="js/services/gratzS.js"></script>
-    <script src="js/services/loginS.js"></script>
+    <script src="js/services/editAdS.js"></script>
+    <script src="js/services/adDetailS.js"></script>
+    <script src="js/services/myAdDetailS.js"></script>
+    <script src="js/services/emailS.js"></script>
     
   </body>
 </html>

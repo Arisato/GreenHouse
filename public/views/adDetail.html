@@ -1,0 +1,31 @@
+<div class="panelPosition">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{listing.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <span><b>Date Available: </b>{{listing.dateAvailable | date: 'dd/MM/yyyy'}}</span>
+    <span class="price">Ad By: {{listing.userFirstName}}</span><br><br>
+    <span class="price"><b>Price: </b>£{{listing.price}} {{listing.paymentPeriod}}</span>
+    <span><b>Address: </b>{{listing.address}}</span><br><br>
+    <span><b>County: </b>{{listing.county}}</span><br><br>
+    <span><b>City: </b>{{listing.city}}</span><br><br>
+    <span><b>Post Code: </b>{{listing.postCode}}</span><br><br>
+    <span><b>Property Type: </b>{{listing.propertyType}}</span><br><br>
+    
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span>{{listing.description}}</span><br>
+      </div>
+    </div>
+    <div class="adDetailBtns" ng-hide='hideIt'>
+      <button class="btn btn-success" ng-click="sendEmail(listing.userId)">Send Email</button>
+      <button type="button" disabled class="btn btn-warning" ng-click="chatLive(listing.userId)">Chat Live</button>
+    </div>
+    <div class="adDetailBack">
+      <button class="btn btn-info" ng-click="cancel()">Go Back</button>
+    </div>
+  </div>
+</div>
+</div>
+

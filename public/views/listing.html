@@ -1,16 +1,29 @@
-<table class="table" ng-repeat="listing in listingsS">
-  <thead>
-    <tr>
-      <td class="title"><p>{{listing.title}}</p></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td class="date"><b>Date Available:</b> {{listing.dateAvailable | date: 'dd/MM/yyyy'}}</td>
-      <td class="price"><b>Price:</b> {{listing.price}}</td>
-    </tr>
-    <tr>
-      <td class="description">{{listing.description}}</td>
-      <td></td>
-    </tr>
-  </thead>
-</table>
+<h1 class="pageTitle">Welcome To Green House!</h1>
+
+<div class="searchPanel">
+  <div class="searchField">
+    <input type="text" name="search" value="" ng-model="search" class="form-control" placeholder="Search for...">
+  </div>
+  <button class="btn btn-success" type="button" name="searchButton" ng-click='searchAd()'>Search!</button>
+</div>
+
+<div class="listingsResponse">{{response}}</div>
+
+
+<div class="listings" ng-repeat="listing in listings">
+    <div class="panel panel-default" ng-click='adDetails(listing._id)'>
+      <div class="panel-heading">
+        <h3 class="panel-title">{{listing.title}}</h3>
+      </div>
+      <div class="panel-body">
+        <span><b>Date Available: </b>{{listing.dateAvailable | date: 'dd/MM/yyyy'}}</span>
+        <span class="price"><b>Price: </b>£{{listing.price}} {{listing.paymentPeriod}}</span><br>
+        <span><b>City: </b>{{listing.city}}</span><br><br>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <span>{{listing.description}}</span><br>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

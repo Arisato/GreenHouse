@@ -1,0 +1,23 @@
+<div ng-hide='hideIt'>
+  <div class="listings" ng-repeat="listing in listings">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading" ng-click='myAdDetails(listing._id)'>
+        <h3 class="panel-title">{{listing.title}}</h3>
+      </div>
+      <div class="panel-body">
+        <span><b>Date Available: </b>{{listing.dateAvailable | date: 'dd/MM/yyyy'}}</span>
+        <span class="price"><b>Price: </b>£{{listing.price}} {{listing.paymentPeriod}}</span><br><br>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <span>{{listing.description}}</span><br>
+          </div>
+        </div>
+        <button class="btn btn-danger" ng-click="deleteAd(listing._id)">Delete</button>
+        <button class="btn btn-success" ng-click="editAd(listing._id)">Edit</button>
+      </div>
+    </div>
+</div>
+</div>
+
+<div>{{listings.resStatus}}</div>

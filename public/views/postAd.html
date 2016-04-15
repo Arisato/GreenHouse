@@ -1,0 +1,60 @@
+<div class="adForm">
+	<form method="post">
+		<div class="inputs">
+		<input type="text" name="title" value="" placeholder="Title" class="form-control" ng-model="ad.title" required>
+		<input type="text" name="date" value="" placeholder="DD/MM/YYYY" class="form-control" ng-model="ad.dateAvailable" required>
+		<input type="text" name="Price" value="" placeholder="Price" class="form-control" ng-model="ad.price" required>
+		<input type="text" name="address" value="" placeholder="Address" class="form-control" ng-model="ad.address" required>
+		<input type="text" name="county" value="" placeholder="County" class="form-control" ng-model="ad.county" required>
+		<input type="text" name="City" value="" placeholder="City" class="form-control" ng-model="ad.city" required>
+		<input type="text" name="postCode" value="" placeholder="Post Code" class="form-control" ng-model="ad.postCode" required>
+		</div>
+		<div class="dropdown1">
+		<select class="form-control" ng-model="ad.paymentPeriod">
+			<option value="">Payment Period</option>
+			<option value="PM">Per Month</option>
+			<option value="PW">Per Week</option>
+		</select>
+		</div>
+		<div class="dropdown2">
+		<select class="form-control" ng-model="ad.propertyType">
+			<option value="">Property Type</option>
+			<option value="HOUSE">House</option>
+			<option value="FLAT">Flat</option>
+		</select>
+		</div><br>
+		<textarea name="description" cols="40" rows="10" value="" placeholder="Enter your property description here." class="form-control" ng-model="ad.description" required></textarea><br>
+		<button class="btn btn-success" ng-click='postAd()'>Go Live!</button>
+	</form>
+	<div>{{response}}</div>
+</div>
+
+
+
+
+
+
+<!-- <div class="adForm">
+	<form method="post">
+		<input type="text" name="title" value="" placeholder="Title" ng-model="ad.title" required><br>
+		<input type="text" name="date" value="" placeholder="Date Available" ng-model="ad.dateAvailable" required><br>
+		<input type="text" name="Price" value="" placeholder="Price" ng-model="ad.price" required><br>
+		<input type="text" name="address" value="" placeholder="Address" ng-model="ad.address" required><br>
+		<input type="text" name="county" value="" placeholder="County" ng-model="ad.county" required><br>
+		<input type="text" name="City" value="" placeholder="City" ng-model="ad.city" required><br>
+		<input type="text" name="postCode" value="" placeholder="Post Code" ng-model="ad.postCode" required><br>
+		<select ng-model="ad.paymentPeriod">
+			<option value="">Please Select</option>
+			<option value="PM">Per Month</option>
+			<option value="PW">Per Week</option>
+		</select>
+		<select ng-model="ad.propertyType">
+			<option value="">Please Select</option>
+			<option value="HOUSE">House</option>
+			<option value="FLAT">Flat</option>
+		</select><br>
+		<textarea name="description" cols="40" rows="10" value="" placeholder="Enter your property description here." ng-model="ad.description" required></textarea><br>
+		<button class="btn btn-success" ng-click='postAd()'>Go Live!</button>
+	</form>
+	<div>{{response}}</div>
+</div> -->

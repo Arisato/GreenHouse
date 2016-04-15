@@ -1,15 +1,19 @@
+<h1 class="registerTitle">Register New Account With Green House!</h1>
+
 <div class="registerForm">
 	<form method="post">
-		<label>First Name: </label>
-		<input type="text" name="firstName" ng-model="user.firstName" required><br>
-		<label>Second Name: </label>
-		<input type="text" name="secondName" ng-model="user.secondName" required><br>
+		<label>Name: </label>
+		<input type="text" name="firstName" placeholder="Name" class="form-control" ng-model="user.firstName" required><br>
+		<label>Surname: </label>
+		<input type="text" name="secondName" placeholder="Surname" class="form-control" ng-model="user.secondName" required><br>
 		<label>Email: </label>
-		<input type="email" name="email" ng-model="user.email" required><br>
+		<input type="email" name="email" placeholder="Enter Email" class="form-control" ng-model="user.email" required><br>
+		<input type="email" name="email" placeholder="Repeat Email" class="form-control" ng-model="user.email2" required><br>
 		<label>Password: </label>
-		<input type="password" name="password" ng-model="user.password" required><br>
-		<button ng-click='register()'>Register</button>
+		<input type="password" name="passwordRegister" placeholder="Enter Password" class="form-control" ng-model="user.password" required><br>
+		<input type="password" name="passwordRegister" placeholder="Repeat Password" class="form-control" ng-model="user.password2" required><br>
+		<button class="btn btn-success" ng-click='register()'>Register</button>
+		<a href="/#/"><button class="btn btn-info">Go Back</button></a>
 	</form>
-
-	<div>{{response}}</div>
 </div>
+<div class="registerResponse">{{response}}</div>
