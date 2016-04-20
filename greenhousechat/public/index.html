@@ -1,0 +1,25 @@
+
+
+	<!DOCTYPE>
+	<html>
+		<head>
+			<link href="css/chat.css" rel="stylesheet" />
+			<link href="css/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+		</head>
+		<body>
+			<div class="entire">
+				<div class="chatWindow">
+					<input type="text" id="user" class="form-control" value="" placeholder="Name">
+					<div id="chatMsgs" class="form-control">
+						<div id="message"></div>
+					</div>
+					<textarea id="textMessage" class="form-control" value="" placeholder="Message here!"></textarea>
+				</div>
+			</div>
+
+			<script src="http://localhost:7001/socket.io/socket.io.js"></script>
+			<script src="js/socketCreate.js"></script>
+			<script src="js/chatAd.js"></script>	
+
+		</body>
+	</html>

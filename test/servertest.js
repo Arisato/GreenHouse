@@ -119,7 +119,6 @@ it('Should login a single user on /login POST', function(done){
 
 
   it('Should send back profile data as long as user is loged in. On /profile GET', function(done){
-    // Log in
     var agent = chai.request.agent(server.app)
     agent
       .post('/login')

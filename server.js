@@ -31,15 +31,17 @@ mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
 app.use(express.static(__dirname + "/public"));
 
 // Middleware
-
 app.use(bodyParser.json());
+
 app.use(userSession({
 	cookieName: 'session',
 	secret: '834gr3429gr9fb2gf2bif29g3gf23f10hf10ufsbdk29uth92h2h3of2hf0',
 	duration: 30 * 60 * 1000,
 	activeDuration: 10 * 60 * 1000,
-	httpOnly: true,
-	ephemeral: true
+	cookie: {
+		httpOnly: true,
+		ephemeral: true
+	}
 }));
 
 app.use(function(req,res, next){
