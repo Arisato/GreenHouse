@@ -64,6 +64,11 @@ button[name="gratzButton"]{
   float: left;
 }
 
+.profileForm{
+  float: left;
+  max-width: 300px;
+}
+
 .searchPanel{
   /*margin-right: 300px;*/
   width: 380px;
@@ -78,8 +83,10 @@ button[name="gratzButton"]{
 }
 
 .adForm{
-  margin-right: auto;
-  margin-left: auto;
+  float: right;
+  margin-right: 30%;
+  /*margin-right: auto;
+  margin-left: auto;*/
   max-width: 300px;
 }
 
