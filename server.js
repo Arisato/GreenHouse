@@ -113,6 +113,12 @@ var getListings = function(req, res){
 };
 
 var postRegister = function(req,res){
+	if(req.body.password === undefined || req.body.email === undefined || req.body.email2 === undefined || req.body.password2 === undefined){
+		return res.send({error: "At least one of the fields is empty. Please fill in all the fields."});
+	}
+	if(req.body.email.length > 50 || req.body.password.length > 50){
+		return res.send({error: "Input in one of the fields exceeds 15 characters"});
+	}
 	if(req.body.password === req.body.password2 && req.body.email === req.body.email2){
 		var hashPass = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 
@@ -141,6 +147,9 @@ var postRegister = function(req,res){
 
 var postLogin = function(req,res){
 	console.log(req.body);
+	if(req.body.email.length > 50 || req.body.password.length > 50){
+		return res.send({error: "Input in one of the fields exceeds 50 characters"});
+	}
 	sch.User.findOne({ email: req.body.email }, function(err, doc){
 		if(!doc){
 			var error = 'Email or password is incorrect'

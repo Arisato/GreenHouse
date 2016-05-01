@@ -14,6 +14,13 @@ textarea{
   max-width: 300px;
 }
 
+.note{
+  float: left;
+  font-family: 'Catamaran', sans-serif;
+  margin-top: 20px;
+  margin-left: 32%;
+}
+
 .listingsResponse{
   float: left;
   margin-top: 150px;
