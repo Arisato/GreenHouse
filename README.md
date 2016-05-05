@@ -2,7 +2,7 @@
 
 You can access the Green House platform and the chat online at:
 
-The Green House platform: http://188.166.158.80:7000/#/
+The Green House platform: http://188.166.158.80:7000/#/<br>
 The online chat platform: http://188.166.158.80:7001
 The GitHub repository of this build: https://github.com/Arisato/GreenHouse.git
 
