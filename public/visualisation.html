@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html ng-app="App">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body ng-controller="visualController">
+
+    <h1>Hello World</h1>
+    <nvd3 data="data" options="options"></nvd3>
+    
+    <!-- Angular -->
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.5/angular-nvd3.min.js"></script>
+    
+    <!-- Controllers -->
+    <script src="js/controllers/visualController.js"></script>
+
+  </body>
+</html>

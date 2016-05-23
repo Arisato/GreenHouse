@@ -311,6 +311,16 @@ var logoutUser = function(req, res){
 	res.send({response: 'success'});
 };
 
+app.get('/viz', function(req,res){
+	console.log('went!');
+	res.sendFile('visualisation.html',{root:  __dirname + '/public/'}, function(err){
+		if(err){ console.error(err); }
+		else{
+			console.log("Sent file")
+		}
+	});
+})
+
 //GET listings
 app.get('/listings', getListings);
 
