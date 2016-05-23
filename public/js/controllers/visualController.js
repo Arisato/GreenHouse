@@ -28,8 +28,8 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				tickFormat: function(d){
 					return new Date(d).toString();
 				},
-				showMaxMin: false,
-                staggerLabels: false
+				showMaxMin: true,
+                staggerLabels: true
 			},
 			yAxis: {
 				axisLabel: 'Number of ads',
