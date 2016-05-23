@@ -11,8 +11,13 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				left: 200,
 				bottom: 50
 			},
-			//useInteractiveGuideline: true,
+			useInteractiveGuideline: true,
 			isArea: true,
+			transitionDuration: 300,
+			interactive:true,
+            legend: {
+                updateState: false
+            },
 			x: function(d){ 
 				var res = new Date(d.date);
 				console.log(d);
@@ -22,7 +27,9 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				axisLabel: 'Date created',
 				tickFormat: function(d){
 					return new Date(d).toString();
-				}
+				},
+				showMaxMin: false,
+                staggerLabels: false
 			},
 			yAxis: {
 				axisLabel: 'Number of ads',
