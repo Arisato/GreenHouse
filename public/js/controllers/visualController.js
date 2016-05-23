@@ -12,7 +12,7 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				bottom: 50
 			},
 			useInteractiveGuideline: true,
-			isArea: true,
+			isArea: false,
 			x: function(d){ 
 				var res = new Date(d.date);
 				console.log(d);
@@ -25,7 +25,8 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				}
 			},
 			yAxis: {
-				axisLabel: 'Number of ads'
+				axisLabel: 'Number of ads',
+				tickFormat: function(d){ return d; }
 			}
 		}
 	}
