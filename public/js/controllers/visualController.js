@@ -11,8 +11,8 @@ app.controller('visualController', ['$scope','$http', function($scope, $http){
 				left: 200,
 				bottom: 50
 			},
-			useInteractiveGuideline: true,
-			isArea: false,
+			//useInteractiveGuideline: true,
+			isArea: true,
 			x: function(d){ 
 				var res = new Date(d.date);
 				console.log(d);
