@@ -12,10 +12,10 @@
 
 <div class="listings" ng-repeat="listing in listings">
     <div class="panel panel-default" ng-click='adDetails(listing._id)'>
-      <div class="panel-heading">
+      <div class="panel-heading" id="heading">
         <h3 class="panel-title">{{listing.title}}</h3>
       </div>
-      <div class="panel-body">
+      <div class="panel-body" id="ad">
         <span><b>Date Available: </b>{{listing.dateAvailable | date: 'dd/MM/yyyy'}}</span>
         <span class="price"><b>Price: </b>£{{listing.price}} {{listing.paymentPeriod}}</span><br>
         <span><b>City: </b>{{listing.city}}</span><br><br>

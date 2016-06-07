@@ -22,7 +22,8 @@
 			<option value="HOUSE">House</option>
 			<option value="FLAT">Flat</option>
 		</select>
-		</div><br>
+		</div><br><br>
+		<input type="file" name="file" class="form-control" file-retrieve="uplFile">
 		<textarea name="description" cols="40" rows="10" value="" placeholder="Enter your property description here." class="form-control" ng-model="ad.description" required></textarea><br>
 		<button class="btn btn-success" ng-click='postAd()'>Go Live!</button>
 	</form>

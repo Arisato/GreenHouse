@@ -2,6 +2,7 @@ body, html {
   margin-right: 10%;
   margin-left: 10%;
   background: white;
+  /*background-image: url(../img/blizzard.png);*/
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -12,6 +13,60 @@ body{
 }
 textarea{
   max-width: 300px;
+}
+
+.btn-success{
+  border-radius: 2px !important;
+}
+.btn-warning{
+  border-radius: 2px !important;
+}
+.btn-danger{
+  border-radius: 2px !important;
+}
+.btn-info{
+  border-radius: 2px !important;
+}
+
+.form-control{
+  border-radius: 2px !important;
+}
+
+#ad{
+  border-radius: 2px !important;
+  /*box-shadow: 1px 1px 5px #888888 !important;*/
+}
+
+.list-group-item:first-child{
+  border-radius: 2px !important;
+}
+.list-group-item:last-child{
+  border-radius: 2px !important;
+}
+
+.well-sm{
+  border-radius: 2px !important;
+}
+
+.list-group-item{
+  /*border-radius: 2px !important;*/
+}
+
+.panel-default{
+  border-radius: 2px !important;
+}
+
+.panel-heading{
+  /*background-color: C0F0D7 !important;*/
+  border-top-left-radius: 1px !important;
+  border-top-right-radius: 1px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+#heading:hover{
+  cursor: pointer !important;
+  background-color: E6E6E6 !important;
 }
 
 .note{
@@ -162,9 +217,13 @@ tr, td{
   color: 004882;
 }
 
-.listings h3:hover{
+/*.listings h3:hover{
   cursor: pointer;
   color: 008CFF;
+}*/
+
+.listings h3{
+  color: black;
 }
 
 .tableDataDetail{
@@ -199,6 +258,10 @@ tr, td{
 .containerLogin{
   float: right;
   margin-top: 105px;
+}
+
+input[name="file"]{
+  margin-bottom: 5px;
 }
 
 input[name="login"]{
