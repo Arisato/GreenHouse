@@ -1,3 +1,5 @@
+University of Brighton - Final Year Project
+
 **Project:**<br> [![Build Status](https://travis-ci.org/Arisato/GreenHouse.svg?branch=master)](https://travis-ci.org/Arisato/GreenHouse)
 
 You can access the Green House platform and the chat online at:
